@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+    <p th:text="${name}"></p>
+    <hr>
+    <!--引用公共片段-->
+    <div th:replace="header :: header_common">
+
+    </div>
+    <hr>
+    <!--方式二-->
+    <div th:replace="header :: #header_common_id">
+
+    </div>
+    <hr>
+    <!--方式三 与 方式一比较-->
+    <p2 th:insert="header :: header_common"></p2>
+    <p2 th:replace="header :: header_common"></p2>
+</body>
+</html>
