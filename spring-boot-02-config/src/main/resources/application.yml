@@ -1,0 +1,23 @@
+server:
+  port: 7070  #默认端口号
+spring:
+  profiles:
+    active: prod
+
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+
+#输出到当前项目根路径下的 springboot.log 文件中
+#logging:
+#  file:  springboot.log
+#输出到当前项目根路径下的 springboot.log 文件中
+logging:
+  path: spring/log
+---
+server:
+     port: 8083
+spring:
+  profiles: prod
